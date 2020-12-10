@@ -46,7 +46,7 @@ Import portlet vào eclipse và import JDK cùng các thư viện trong thư m�
 
 **Tạo file cấu hình build nhanh**
 
-Vào thư mục `~/tomcat-9.0.10/conf/Catalina/localhost` tạo file `SamlePortlet.xml` với nội dung như sau:
+Vào thư mục `~/tomcat-9.0.10/conf/Catalina/localhost` tạo file `SamplePortlet.xml` với nội dung như sau:
 
 ```xml
 <Context reloadable="true" />
