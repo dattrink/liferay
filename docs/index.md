@@ -1,37 +1,61 @@
-## Welcome to GitHub Pages
+## I. Liferay 7.x blank portlet release
 
-You can use the [editor on GitHub](https://github.com/ttdathub/liferay/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+**Yêu cầu hệ thống:**
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- Liferay 7.x server. Tải [server Liferay 7.1](https://sourceforge.net/projects/lportal/files/Liferay%20Portal/7.1.0%20GA1/)
 
-### Markdown
+- Postgres 9.6 (Khuyên dùng)
+- Node js (phiên bản mới nhất)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+Tải server Liferay 7.x về giải nén sau đó vào thư mục `/webapps` chạy lệnh:
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+git clone https://github.com/ttdathub/liferay-blank-portlet.git SamplePortlet
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+![Git clone command](.\assets\images\portlet-clone-cmd.PNG)
 
-### Jekyll Themes
+**Portlet được cài đặt sẵn:**
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ttdathub/liferay/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+- JSF 2.2.15
+- Primefaces 8
+- Gson
+- Lombok
+- Log4j
+- Guava-r05
+- Apache POI 3.15
+- Hibernate 5.5.2
+- Flyway
+- Webpack & Laravel mix
 
-### Support or Contact
+**Sử dụng webpack**
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Run command to install dependencies.
+
+```bash
+npm install
+```
+
+**Java Build Path**
+
+Import portlet vào eclipse và import JDK cùng các thư viện trong thư mục `/dev/lib` và `/WEB-INF/lib` => Build and start Liferay
+
+![Portlet structure](G:\ttdat\typora\images\blank-portlet-structure.PNG)
+
+**Tạo file cấu hình build nhanh**
+
+Vào thư mục `~/tomcat-9.0.10/conf/Catalina/localhost` tạo file `SamlePortlet.xml` với nội dung như sau:
+
+```xml
+<Context reloadable="true" />
+```
+
+
+
+Portlet sẽ tự động deploy khi ta build lại thay vì deploy bằng file *.war
+
+Start server:
+
+![](G:\ttdat\typora\images\server-started.PNG)
