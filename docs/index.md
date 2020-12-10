@@ -42,7 +42,7 @@ npm install
 
 Import portlet vào eclipse và import JDK cùng các thư viện trong thư mục `/dev/lib` và `/WEB-INF/lib` => Build and start Liferay
 
-![Portlet structure](G:\ttdat\typora\images\blank-portlet-structure.PNG)
+![Portlet structure](.\assets\images\blank-portlet-structure.PNG)
 
 **Tạo file cấu hình build nhanh**
 
@@ -58,4 +58,4 @@ Portlet sẽ tự động deploy khi ta build lại thay vì deploy bằng file 
 
 Start server:
 
-![](G:\ttdat\typora\images\server-started.PNG)
+![](.\assets\images\server-started.PNG)
